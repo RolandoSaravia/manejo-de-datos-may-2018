@@ -17,8 +17,8 @@ SELECT LAST_NAME, job_id , SALARY FROM Employees WHERE job_id IN ("IT_PROG", "SH
 SELECT last_name FROM Employees WHERE last_name LIKE '________'
 #8
 SELECT last_name FROM Employees where last_name like "__e%"
-#9
-SELECT DISTINCT job_id  FROM Employees;
+#9Write a query to display the available JOBS (i.e. the ones that no employee has taken).
+SELECT DISTINCT Employees.JOB_ID FROM Employees INNER JOIN Jobs ON Employees.JOB_ID = Jobs.JOB_ID WHERE Employees.JOB_ID IS NULL
 #10
 SELECT first_name, last_name, salary, salary* 0.15 PF FROM Employees
 #11
